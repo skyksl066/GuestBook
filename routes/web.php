@@ -16,3 +16,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('post', 'GusetbookController@index');
+Route::get('post/create', 'GusetbookController@create');
+Route::post('post', 'GusetbookController@store');
+Route::get('post/{id}', 'GusetbookController@show');
+Route::get('post/{id}/edit', 'GusetbookController@edit');
+Route::put('post/{id}', 'GusetbookController@update');
+Route::delete('post/{id}', 'GusetbookController@destroy');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
