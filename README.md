@@ -7,6 +7,28 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-## About Lareval-GuestBook-Sample
+#Lareval-GuestBook-Sample
+
+##step 1:
+
+Setup Laravel 7 first!!
+
+<a href="https://laravel.com/docs/7.x/installation">Installation</a>
+
+##step 2:
+
+    git clone https://github.com/90418139/Lareval-GuestBook-Sample.git
+
+
+edit '.env'
+
+```$xslt
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=your sql database name
+DB_USERNAME=your sql username name
+DB_PASSWORD=your sql password name
+```
 
 write something
