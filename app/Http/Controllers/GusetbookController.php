@@ -14,58 +14,48 @@ class GusetbookController extends Controller
         return view('guestbook/guest-book')->with('title', 'GuestBook')->with('posts', $posts);
     }
 
-    public function create()
-    {
-        return view('components/create')->with('title', '新增文章');
-    }
-
+    //儲存至資料庫
     public function store()
     {
         $input = request()->all();
 
         $post = new Post;
-        $post->title = $input['title'];
+        $post->email = $input['email'];
+        $post->name = $input['name'];
         $post->content = $input['content'];
         $post->save();
 
         return redirect('post');
     }
 
-    public function show($id)
-    {
-        $post = Post::find($id);
-
-        return view('components/show')
-            ->with('title', 'My Blog - '. $post->title)
-            ->with('post', $post);
-    }
-
+    //取出對應id傳到edit頁面
     public function edit($id)
     {
         $post = Post::find($id);
 
-        return view('components/edit')
+        return view('guestbook/guest-book-edit')
             ->with('title', '編輯文章')
             ->with('post', $post);
     }
 
+    //更新對應id資料
     public function update($id)
     {
         $input = request()->all();
 
         $post = Post::find($id);
-        $post->title = $input['title'];
         $post->content = $input['content'];
         $post->save();
 
-        return redirect('post');
+        return redirect('/home');
     }
 
+    //刪除對應id資料
     public function destroy($id)
     {
         $post = Post::find($id);
         $post->delete();
 
-        return redirect('post');
+        return redirect('/home');
     }
 }

@@ -13,6 +13,6 @@ class Post extends Model
     protected $primaryKey = 'id';
     // 可以大量指定異動的欄位（Mass Assignment）
     protected $fillable = [
-        'title', 'content',
+        'name', 'content', 'email',
     ];
 }

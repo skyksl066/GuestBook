@@ -1,23 +1,29 @@
-@extends('layouts.app')
+@extends('layout.head')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    You are logged in!
-                </div>
-            </div>
-        </div>
+@if (isset($posts))
+@foreach ($posts as $post)
+@if ($post->email == Auth::user()->email)
+<div class="card">
+    <div class="card-header">
+        {{ $post->name }}
+        <form action="{{ url('post/'.$post->id) }}" method="post">
+        @csrf
+        @method('delete')
+        <button class="btn btn-outline-success" type="submit">刪除</button>
+        </form>
+        <a class="btn btn-outline-success" href="{{ url('post/'.$post->id.'/edit') }}">編輯</a></li>
+    </div>
+    <div class="card-body">
+        <p class="card-text">{{ $post->content }}</p>
     </div>
 </div>
+<br />
+@endif
+@endforeach
+@endif
+
 @endsection
+
+
