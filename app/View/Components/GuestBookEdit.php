@@ -4,7 +4,7 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class guest-book-edit extends Component
+class GuestBookEdit extends Component
 {
     /**
      * Create a new component instance.
@@ -23,6 +23,6 @@ class guest-book-edit extends Component
      */
     public function render()
     {
-        return view('components.guest-book-edit');
+        return view('components.guestbookedit');
     }
 }

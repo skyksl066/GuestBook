@@ -12,18 +12,21 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+//首頁
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('post', 'GusetbookController@index');
-Route::get('post/create', 'GusetbookController@create');
-Route::post('post', 'GusetbookController@store');
-Route::get('post/{id}', 'GusetbookController@show');
-Route::get('post/{id}/edit', 'GusetbookController@edit');
-Route::put('post/{id}', 'GusetbookController@update');
-Route::delete('post/{id}', 'GusetbookController@destroy');
+//顯示留言
+Route::get('guestbook', 'GusetbookController@index');
+//上傳留言
+Route::post('guestbook', 'GusetbookController@store');
+//編輯留言
+Route::get('guestbook/{id}/edit', 'GusetbookController@edit');
+//更新留言
+Route::put('guestbook/{id}', 'GusetbookController@update');
+//刪除留言
+Route::delete('guestbook/{id}', 'GusetbookController@destroy');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+

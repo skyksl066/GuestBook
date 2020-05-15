@@ -1,9 +1,10 @@
-<!-- 指定繼承 layout.master 母模板 -->
+{{-- 指定繼承 layout.head 母模板 --}}
 @extends('layout.head')
 
-<!-- 傳送資料到母模板，並指定變數為 title -->
+{{-- 傳送資料到母模板，並指定變數為 title --}}
 @section('title', $title ?? '')
-<!-- Styles -->
+
+{{-- Styles --}}
 <style>
     html, body {
         background-color: #fff;
@@ -56,7 +57,7 @@
         margin-bottom: 30px;
     }
 </style>
-<!-- 傳送資料到母模板，並指定變數為 content -->
+{{-- 傳送資料到母模板，並指定變數為 content --}}
 @section('content')
 <div class="container">
     <div class="flex-center position-ref full-height">
@@ -68,7 +69,7 @@
 
             <div class="links">
                 <a href="https://laravel.com/docs">Docs</a>
-                <a href={{ url('post') }}>Guestbook</a>
+                <a href={{ url('guestbook') }}>Guestbook</a>
                 <a href="https://laracasts.com">Laracasts</a>
                 <a href="https://laravel-news.com">News</a>
                 <a href="https://blog.laravel.com">Blog</a>

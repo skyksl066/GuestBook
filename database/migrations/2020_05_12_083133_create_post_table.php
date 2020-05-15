@@ -15,9 +15,10 @@ class CreatePostTable extends Migration
     {
         Schema::create('post', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('email', 255);
+            $table->string('name', 50);
+            $table->string('email', 255)->unique();
             $table->text('content');
+
         });
     }
 

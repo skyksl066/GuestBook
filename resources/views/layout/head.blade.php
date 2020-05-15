@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@yield('title')  Laravel</title>
 
-    <!-- Fonts -->
+    {{-- Fonts --}}
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+    {{-- bootstrap css --}}
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
 </head>
 <body>
@@ -21,7 +22,7 @@
             @if (Route::has('login'))
             @auth
             <li class="nav-item active">
-                <a class="nav-link" href="{{ url('/home') }}">會員中心 <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="{{ url('/home') }}" hidden>會員中心 <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Logout') }}<span class="sr-only">(current)</span></a>
@@ -45,19 +46,8 @@
             @endauth
             @endif
             <li class="nav-item">
-                <a class="nav-link" href="{{ url('/post') }}">留言板</a>
+                <a class="nav-link" href="{{ url('/guestbook') }}">GuestBook</a>
             </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Language
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item set_language" data-language="zh-TW" href="#">繁體中文</a>
-                    <a class="dropdown-item set_language" data-language="zh-CN" href="#">简体中文</a>
-                    <a class="dropdown-item set_language" data-language="en" href="#">English</a>
-                </div>
-            </li>
-
         </ul>
     </div>
 </nav>
@@ -67,6 +57,8 @@
     @yield('content')
 </div>
 
+
+{{-- bootstrap js --}}
 <script src="/assets/js/jquery-3.4.1.slim.min.js" defer></script>
 <script src="/assets/js/popper.min.js" defer></script>
 <script src="/assets/js/bootstrap.min.js" defer></script>

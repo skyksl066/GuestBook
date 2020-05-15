@@ -23,6 +23,6 @@ class GuestBook extends Component
      */
     public function render()
     {
-        return view('components.guest-book');
+        return view('components.guestbook');
     }
 }

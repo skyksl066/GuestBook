@@ -16,9 +16,9 @@ Setup Laravel 7 first!!
 <a href="https://laravel.com/docs/7.x/installation">Installation</a>
 
 ##step 2:
+git this project.
 
     git clone https://github.com/90418139/Lareval-GuestBook-Sample.git
-
 
 edit '.env'
 
@@ -27,8 +27,16 @@ DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
 DB_DATABASE=your sql database name
-DB_USERNAME=your sql username name
-DB_PASSWORD=your sql password name
+DB_USERNAME=your sql username
+DB_PASSWORD=your sql password
 ```
+
+##step 3:
+
+make sql table
+
+you can use cmdline or by hand
+
+    php artisan migrate
 
 write something
