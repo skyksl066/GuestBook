@@ -18,6 +18,7 @@ class CreatePostTable extends Migration
             $table->string('name', 50);
             $table->string('email', 255)->unique();
             $table->text('content');
+            $table->timestamps();
 
         });
     }

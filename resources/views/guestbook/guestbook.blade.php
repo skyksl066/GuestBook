@@ -14,7 +14,7 @@
             <div class="card">
                 <div class="card-header">
                     {{-- 填入$posts中的name數值 --}}
-                    <h5>{{ $post->name }}</h5>
+                    <h4>{{ $post->name }}
 
                     {{-- 判斷使用者是否登入 --}}
                     @auth
@@ -35,6 +35,8 @@
                     </ul>
                     @endif
                     @endauth
+                    </h4>
+                    {{ $post->created_at }}
                 </div>
                 <div class="card-body">
                     {{-- 填入$posts中的content數值 --}}
@@ -44,7 +46,8 @@
             <br />
         @endforeach
     @endif
-
+    {{-- 分頁頁數按鈕 --}}
+    {{ $posts->links() }}
 @if (isset($errors))
 <span class="invalid-feedback" role="alert">
                 <strong>{{ $errors }}</strong>
@@ -67,13 +70,25 @@
                 {{-- 判斷使用者是否登入 --}}
                 @guest
                 <label for="title">Name</label>
-                <input type="name" class="form-control" id="name" name="name">
+                {{-- 'old'輸入驗證如果沒通過頁面轉回來把剛剛送出的資料填回 --}}
+                <input type="name" class="form-control" id="name" name="name" value="{{ old('name') }}">
                 <input type="hidden" class="form-control" id="email" name="email" value="">
+
+                @error('name')
+                {{-- 輸入驗證如果沒通過返還訊息 --}}
+                <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
+
                 @endguest
             </div>
             <div class="form-group">
                 <label for="content">Message</label>
-                <textarea class="form-control" id="content" name="content" rows="3"></textarea>
+                {{-- 'old'輸入驗證如果沒通過頁面轉回來把剛剛送出的資料填回 --}}
+                <textarea class="form-control" id="content" name="content" rows="3">{{ old('content') }}</textarea>
+                @error('content')
+                {{-- 輸入驗證如果沒通過返還訊息 --}}
+                <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>

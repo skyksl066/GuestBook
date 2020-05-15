@@ -12,7 +12,10 @@ class GusetbookController extends Controller
     //顯示留言
     public function index()
     {
-        $posts = Post::all();
+        //$posts = Post::all();
+        //每頁資料筆數
+        $row_per_page = 4;
+        $posts = Post::OrderBy('created_at', 'desc')->paginate($row_per_page);
 
         return view('guestbook/guestbook')->with('title', 'GuestBook')->with('posts', $posts);
     }
@@ -27,22 +30,28 @@ class GusetbookController extends Controller
         $input = request()->all();
 
         $validator = Validator::make($input, [
-            'name' => 'required | string | max:50',
+            'name' => 'required|max:50',
+            'content' => 'required|min:5',
         ]);
 
-        $post = new Post;
-        $post->email = $input['email'];
-        $post->name = $input['name'];
-        $post->content = $input['content'];
-        $post->save();
+        if ($validator->fails()){
+            print_r('error');
+            return redirect('guestbook')->withErrors($validator)->withInput();
+        }else{
+            $post = new Post;
+            $post->email = $input['email'];
+            $post->name = $input['name'];
+            $post->content = $input['content'];
+            $post->save();
+            return redirect('guestbook');
+        }
 
-        return redirect('guestbook');
     }
 
     //取出對應id傳到edit頁面
     public function edit($id)
     {
-        $post = Post::find($id);
+        $post = Post::findOrFail($id);
 
         return view('guestbook/guestbookedit')
             ->with('title', 'Edit Post')
