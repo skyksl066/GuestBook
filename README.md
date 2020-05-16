@@ -7,9 +7,9 @@
 <img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License">
 </p>
 
-#Lareval-GuestBook-Sample
+# Lareval-GuestBook-Sample
 
-##step 1:
+## step 1:
 
 Install Laravel 7 first!!
 
@@ -23,7 +23,8 @@ composer require laravel/ui
 php artisan ui vue --auth
 ```
 
-##step 2:
+## step 2:
+
 Git this project to cover.
 
     git clone https://github.com/90418139/Lareval-GuestBook-Sample.git
@@ -39,7 +40,7 @@ DB_USERNAME=(your sql username)
 DB_PASSWORD=(your sql password)
 ```
 
-##step 3:
+## step 3:
 
 Make sql table
 
@@ -51,7 +52,7 @@ If you don't have sql server.you can install "<a href="https://www.apachefriends
 
 
 
-##step 4:
+## step 4:
 
 Start project.
 
