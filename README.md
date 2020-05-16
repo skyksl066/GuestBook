@@ -9,6 +9,8 @@
 
 # Lareval-GuestBook-Sample
 
+This project uses the laravel framework, with functions such as database addition / editing / deletion and membership system.
+
 ## step 1:
 
 Install Laravel 7 first!!
