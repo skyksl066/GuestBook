@@ -13,13 +13,15 @@ This project uses the laravel framework, with functions such as database additio
 
 ## step 1:
 
-Git this project to cover.
+Git this project.
 
     git clone https://github.com/90418139/Lareval-GuestBook-Sample.git
     cd Lareval-GuestBook-Sample
     composer install
     cp .env.example .env
     php artisan key:generate
+    
+don't have composer? <a href='https://getcomposer.org/'>Composer</a>
 
 ## step 2:
 
