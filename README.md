@@ -21,7 +21,7 @@ Git this project.
     cp .env.example .env
     php artisan key:generate
     
-Don't have composer? <a href='https://getcomposer.org/'>Composer</a>
+Composer not answer? <a href='https://getcomposer.org/'>Composer</a>
 
 ## step 2:
 
