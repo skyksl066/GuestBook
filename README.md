@@ -13,23 +13,17 @@ This project uses the laravel framework, with functions such as database additio
 
 ## step 1:
 
-Install Laravel 7 first!!
-
-<a href="https://laravel.com/docs/7.x/installation">Installation</a> Or do this if you know what it.
-
-```
-composer global require laravel/installer
-laravel new blog
-cd blog
-composer require laravel/ui
-php artisan ui vue --auth
-```
-
-## step 2:
-
 Git this project to cover.
 
     git clone https://github.com/90418139/Lareval-GuestBook-Sample.git
+    cd composer install
+    composer install
+    cp .env.example .env
+    php artisan key:generate
+
+## step 2:
+
+
 
 Edit '.env'
 
