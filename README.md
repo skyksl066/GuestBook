@@ -21,6 +21,8 @@ Git this project.
     cp .env.example .env
     php artisan key:generate
     
+Git not anwser? <a href='https://git-scm.com/'>Git</a>
+
 Composer not answer? <a href='https://getcomposer.org/'>Composer</a>
 
 ## step 2:
