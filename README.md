@@ -44,7 +44,7 @@ DB_PASSWORD=(your sql password)
 
 Make sql table
 
-You can use cmdline or by hand
+You can use command line or by hand
 
     php artisan migrate
     
