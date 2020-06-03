@@ -13,7 +13,9 @@ This project uses the laravel framework, with functions such as database additio
 
 ## step 1:
 
-Git this project.
+Get this project.
+
+Open command line enter this.
 
     git clone https://github.com/90418139/Lareval-GuestBook-Sample.git
     cd Lareval-GuestBook-Sample
