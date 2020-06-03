@@ -23,8 +23,6 @@ Git this project to cover.
 
 ## step 2:
 
-
-
 Edit '.env'
 
 ```$xslt
