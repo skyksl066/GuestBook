@@ -17,12 +17,14 @@ Get this project.
 
 Open command line enter this.
 
-    git clone https://github.com/90418139/Lareval-GuestBook-Sample.git
-    cd Lareval-GuestBook-Sample
-    composer install
-    cp .env.example .env
-    php artisan key:generate
-    
+```
+git clone https://github.com/90418139/Lareval-GuestBook-Sample.git
+cd Lareval-GuestBook-Sample
+composer install
+cp .env.example .env
+php artisan key:generate
+``` 
+
 Git not anwser? <a href='https://git-scm.com/'>Git</a>
 
 Composer not answer? <a href='https://getcomposer.org/'>Composer</a>
