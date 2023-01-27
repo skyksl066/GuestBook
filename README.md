@@ -1,12 +1,3 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
-
-<p align="center">
-<img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status">
-<img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads">
-<img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version">
-<img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License">
-</p>
-
 # Lareval-GuestBook-Sample
 
 This project uses the laravel framework, with functions such as database addition / editing / deletion and membership system.
