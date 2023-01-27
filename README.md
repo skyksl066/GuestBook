@@ -9,8 +9,8 @@ Get this project.
 Open command line enter this.
 
 ```
-git clone https://github.com/90418139/Lareval-GuestBook-Sample.git
-cd Lareval-GuestBook-Sample
+git clone git@github.com:skyksl066/GuestBook.git
+cd GuestBook
 composer install
 cp .env.example .env
 php artisan key:generate
